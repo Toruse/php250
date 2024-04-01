@@ -10,7 +10,7 @@
         <meta property="og:title" content="{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->ru->siteName }}"/>
         <meta property="og:description" content="{{ $page->description ?? $page->ru->siteDescription }}"/>
         <meta property="og:url" content="{{ $page->getUrl() }}"/>
-        <meta property="og:image" content="/assets/img/logo.png"/>
+        <meta property="og:image" content="{{ $page->baseUrl }}/assets/img/logo.png"/>
         <meta property="og:type" content="website"/>
 
         <meta name="twitter:image:alt" content="{{ $page->ru->siteName }}">
@@ -23,7 +23,7 @@
         <title>{{ $page->ru->siteName }}{{ $page->title ? ' | ' . $page->title : '' }}</title>
 
         <link rel="home" href="{{ $page->baseUrl }}">
-        <link rel="icon" href="/favicon.ico">
+        <link rel="icon" href="{{ $page->baseUrl }}/favicon.ico">
 
         @stack('meta')
 
@@ -43,8 +43,8 @@
         <header class="flex items-center shadow bg-white border-b h-24 mb-8 py-4" role="banner">
             <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
                 <div class="flex items-center">
-                    <a href="/ru" title="{{ $page->ru->siteName }} home" class="inline-flex items-center">
-                        <img class="h-8 md:h-10 mr-3" src="/assets/img/logo.png" alt="{{ $page->ru->siteName }} logo" />
+                    <a href="{{ $page->baseUrl }}/ru" title="{{ $page->ru->siteName }} home" class="inline-flex items-center">
+                        <img class="h-8 md:h-10 mr-3" src="{{ $page->baseUrl }}/assets/img/logo.png" alt="{{ $page->ru->siteName }} logo" />
 
                         <h1 class="text-lg md:text-2xl text-blue-900 font-semibold hover:text-blue-600 my-0 pr-4">{{ $page->ru->siteName }}</h1>
                     </a>
@@ -54,13 +54,13 @@
                     @if ($page->docsearchApiKey && $page->docsearchIndexName)
                         @include('_nav.search-input')
                     @endif
-                    <a href="/" title="{{ $page->ua->siteName }} home" class="px-1">
+                    <a href="{{ $page->baseUrl }}" title="{{ $page->ua->siteName }} home" class="px-1">
                         ua
                     </a>
-                    <a href="/en" title="{{ $page->en->siteName }} home" class="px-1">
+                    <a href="{{ $page->baseUrl }}/en" title="{{ $page->en->siteName }} home" class="px-1">
                         en
                     </a>
-                    <a href="/ru" title="{{ $page->ru->siteName }} home" class="px-1 font-black">
+                    <a href="{{ $page->baseUrl }}/ru" title="{{ $page->ru->siteName }} home" class="px-1 font-black">
                         ru
                     </a>
                 </div>
@@ -73,7 +73,7 @@
             @yield('body')
         </main>
 
-        <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
+        <script src="{{ $page->baseUrl }}{{ mix('js/main.js', 'assets/build') }}"></script>
 
         @stack('scripts')
 
