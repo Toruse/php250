@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'baseUrl' => 'https://toruse.github.io/php250/',
+    'baseUrl' => 'https://toruse.github.io/php250',
     'production' => true,
 
     // DocSearch credentials

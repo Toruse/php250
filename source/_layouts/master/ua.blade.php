@@ -10,7 +10,7 @@
         <meta property="og:title" content="{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->ua->siteName }}"/>
         <meta property="og:description" content="{{ $page->description ?? $page->ua->siteDescription }}"/>
         <meta property="og:url" content="{{ $page->getUrl() }}"/>
-        <meta property="og:image" content="{{ $page->baseUrl }}assets/img/logo.png"/>
+        <meta property="og:image" content="{{ $page->baseUrl }}/assets/img/logo.png"/>
         <meta property="og:type" content="website"/>
 
         <meta name="twitter:image:alt" content="{{ $page->ua->siteName }}">
@@ -23,7 +23,7 @@
         <title>{{ $page->ua->siteName }}{{ $page->title ? ' | ' . $page->title : '' }}</title>
 
         <link rel="home" href="{{ $page->baseUrl }}">
-        <link rel="icon" href="{{ $page->baseUrl }}favicon.ico">
+        <link rel="icon" href="{{ $page->baseUrl }}/favicon.ico">
 
         @stack('meta')
 
@@ -32,7 +32,7 @@
         @endif
 
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
-        <link rel="stylesheet" href="{{ $page->baseUrl|trim('\\') }}{{ mix('css/main.css', 'assets/build') }}">
+        <link rel="stylesheet" href="{{ $page->baseUrl }}{{ mix('css/main.css', 'assets/build') }}">
 
         @if ($page->docsearchApiKey && $page->docsearchIndexName)
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
@@ -44,7 +44,7 @@
             <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
                 <div class="flex items-center">
                     <a href="{{ $page->baseUrl }}" title="{{ $page->ua->siteName }} home" class="inline-flex items-center">
-                        <img class="h-8 md:h-10 mr-3" src="{{ $page->baseUrl }}assets/img/logo.png" alt="{{ $page->ua->siteName }} logo" />
+                        <img class="h-8 md:h-10 mr-3" src="{{ $page->baseUrl }}/assets/img/logo.png" alt="{{ $page->ua->siteName }} logo" />
 
                         <h1 class="text-lg md:text-2xl text-blue-900 font-semibold hover:text-blue-600 my-0 pr-4">{{ $page->ua->siteName }}</h1>
                     </a>
@@ -57,10 +57,10 @@
                     <a href="{{ $page->baseUrl }}" title="{{ $page->ua->siteName }} home" class="px-1 font-black">
                         ua
                     </a>
-                    <a href="{{ $page->baseUrl }}en" title="{{ $page->en->siteName }} home" class="px-1">
+                    <a href="{{ $page->baseUrl }}/en" title="{{ $page->en->siteName }} home" class="px-1">
                         en
                     </a>
-                    <a href="{{ $page->baseUrl }}ru" title="{{ $page->ru->siteName }} home" class="px-1">
+                    <a href="{{ $page->baseUrl }}/ru" title="{{ $page->ru->siteName }} home" class="px-1">
                         ru
                     </a>
                 </div>
@@ -73,7 +73,7 @@
             @yield('body')
         </main>
 
-        <script src="{{ $page->baseUrl|trim('\\') }}{{ mix('js/main.js', 'assets/build') }}"></script>
+        <script src="{{ $page->baseUrl }}{{ mix('js/main.js', 'assets/build') }}"></script>
 
         @stack('scripts')
 
