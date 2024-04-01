@@ -1,0 +1,10 @@
+/build_*/
+/node_modules/
+/vendor/
+/source/assets/build/
+.env
+npm-debug.log
+/composer.lock
+.idea
+LICENSE.txt
+package-lock.json

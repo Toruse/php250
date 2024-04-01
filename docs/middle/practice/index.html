@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Middle. Практичні завдання">
+
+        <meta property="og:site_name" content="Співбесіда: Запитання по PHP"/>
+        <meta property="og:title" content="Практичні завдання | Співбесіда: Запитання по PHP"/>
+        <meta property="og:description" content="Middle. Практичні завдання"/>
+        <meta property="og:url" content="https://toruse.github.io/php250/middle/practice"/>
+        <meta property="og:image" content="/assets/img/logo.png"/>
+        <meta property="og:type" content="website"/>
+
+        <meta name="twitter:image:alt" content="Співбесіда: Запитання по PHP">
+        <meta name="twitter:card" content="summary_large_image">
+
+        
+        <title>Співбесіда: Запитання по PHP | Практичні завдання</title>
+
+        <link rel="home" href="https://toruse.github.io/php250/">
+        <link rel="icon" href="/favicon.ico">
+
+        
+                    <!-- Insert analytics code here -->
+        
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=e589543246089b604f6244e5bc54fda7">
+
+            </head>
+
+    <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
+        <header class="flex items-center shadow bg-white border-b h-24 mb-8 py-4" role="banner">
+            <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
+                <div class="flex items-center">
+                    <a href="/" title="Співбесіда: Запитання по PHP home" class="inline-flex items-center">
+                        <img class="h-8 md:h-10 mr-3" src="/assets/img/logo.png" alt="Співбесіда: Запитання по PHP logo" />
+
+                        <h1 class="text-lg md:text-2xl text-blue-900 font-semibold hover:text-blue-600 my-0 pr-4">Співбесіда: Запитання по PHP</h1>
+                    </a>
+                </div>
+
+                <div class="flex flex-1 justify-end items-center text-right md:pl-10">
+                                        <a href="/" title="Співбесіда: Запитання по PHP home" class="px-1 font-black">
+                        ua
+                    </a>
+                    <a href="/en" title="Interview: PHP Questions home" class="px-1">
+                        en
+                    </a>
+                    <a href="/ru" title="Собеседование: Вопросы по PHP home" class="px-1">
+                        ru
+                    </a>
+                </div>
+            </div>
+
+                <button class="flex justify-center items-center bg-blue-500 border border-blue-500 h-10 mr-4 px-5 rounded-full lg:hidden focus:outline-none"
+    onclick="navMenu.toggle()"
+>
+    <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
+        class="fill-current text-white h-9 w-4" viewBox="0 0 32 32"
+    >
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+    </svg>
+
+    <svg id="js-nav-menu-hide" xmlns="http://www.w3.org/2000/svg"
+        class="hidden fill-current text-white h-9 w-4" viewBox="0 0 36 30"
+    >
+        <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+    </svg>
+</button>
+
+        </header>
+
+        <main role="main" class="w-full flex-auto">
+            <section class="container max-w-8xl mx-auto px-6 md:px-8 py-4">
+    <div class="flex flex-col lg:flex-row">
+        <nav id="js-nav-menu" class="nav-menu hidden lg:block">
+            <ul class="my-0">
+            <li class="pl-4">
+            
+        <a href="/junior/general"
+            class="lvl0   nav-menu__item hover:text-blue-500"
+        >
+            Junior
+        </a>
+    
+            
+        <ul class="my-0">
+            <li class="pl-4">
+            
+        <a href="/junior/general"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Загальні
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/junior/git"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Git
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/junior/databases"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Бази даних
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/junior/laravel"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Laravel
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/junior/composer"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Composer
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/junior/practice"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Практичні завдання
+        </a>
+    
+    </li>
+    </ul>
+    </li>
+            <li class="pl-4">
+            
+        <a href="/middle/general"
+            class="lvl0 lvl0-active  nav-menu__item hover:text-blue-500"
+        >
+            Middle
+        </a>
+    
+            
+        <ul class="my-0">
+            <li class="pl-4">
+            
+        <a href="/middle/general"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Загальні
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/middle/git"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Git
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/middle/databases"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Бази даних
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/middle/laravel"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Laravel
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/middle/practice"
+            class="lvl1  active font-semibold text-blue-500 nav-menu__item hover:text-blue-500"
+        >
+            Практичні завдання
+        </a>
+    
+    </li>
+    </ul>
+    </li>
+            <li class="pl-4">
+            
+        <a href="/senior/general"
+            class="lvl0   nav-menu__item hover:text-blue-500"
+        >
+            Senior
+        </a>
+    
+            
+        <ul class="my-0">
+            <li class="pl-4">
+            
+        <a href="/senior/general"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Загальні
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/senior/git"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Git
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/senior/databases"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Бази даних
+        </a>
+    
+    </li>
+            <li class="pl-4">
+            
+        <a href="/senior/practice"
+            class="lvl1   nav-menu__item hover:text-blue-500"
+        >
+            Практичні завдання
+        </a>
+    
+    </li>
+    </ul>
+    </li>
+    </ul>
+        </nav>
+
+        <div class="DocSearch-content w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
+            <h1>Практичні завдання</h1>
+
+<h2>Вам потрібно спарсити продукти та їхні ціни з інтернет-магазину. За допомогою чого будете це робити і які основні нюанси потрібно врахувати?</h2>
+
+<h2>Для сайту користувачів необхідно зробити механізм додавання і відображення аватарок. Як би ви його реалізували?</h2>
+
+<h2>Який результат видасть такий код:</h2>
+
+<pre><code class="language-php">class Test
+{
+public $ value;
+}
+
+$a = new Test;
+$a-&gt;value = 1;
+
+$b = $ a;
+$b-&gt;value = 2;
+
+echo $a-&gt;value;
+</code></pre>
+
+<h2>Які модифікатори доступу допустимі в реалізації методу getName:</h2>
+
+<pre><code class="language-php">abstract class Cls
+{
+protected abstract function getName ();
+}
+
+class Child extends Cls
+{
+(Public, protected, private) function getName () {}
+}
+</code></pre>
+
+<h2>Реалізуйте чергу повідомлень, використовуючи MySQL для зберігання даних. Як уникнути ситуації, коли декілька воркерів отримають в обробку однакове повідомлення?</h2>
+
+<h2>Є матриця з числами 3×3. Як знайти числа, що не мають парних/непарних сусідів?</h2>
+
+<h2>Є мануал на API від Європейського центрального банку з курсом валют. Потрібно знайти мінімуми-максимуми за 5 років, а потім те саме, але з розбивкою за місяцями.</h2>
+
+<h2>Збережіть свою бібліотеку в БД. Потрібно зберегти назви книг і імена авторів. Запропонуйте структуру таблиць. Виведіть звіт «книга — кількість співавторів».</h2>
+
+<h2>Реалізуйте примітивний роутинг, який забезпечує роботу Рауса за шаблоном "/ {class_name} / {method_name} /"</h2>
+
+<h2>Напишіть архітектуру, яка ґрунтується на базовій абстракції. Дочірні класи розширюються за допомогою інтерфейсів. Реалізацію однакових методів виконайте, використовуючи трейти (реалізовувати в абстракції).</h2>
+
+<h2>Напишіть запит, у результаті виконання якого виведеться значення «id» і «val», якщо значення стовпця column> 5 => val = val1 інакше val2.</h2>
+
+<table>
+<thead>
+<tr>
+  <th align="center">id</th>
+  <th align="center">column</th>
+  <th align="center">val1</th>
+  <th align="center">val2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center">1</td>
+  <td align="center">1</td>
+  <td align="center">‘a’</td>
+  <td align="center">‘d’</td>
+</tr>
+<tr>
+  <td align="center">2</td>
+  <td align="center">6</td>
+  <td align="center">‘b’</td>
+  <td align="center">‘e’</td>
+</tr>
+<tr>
+  <td align="center">3</td>
+  <td align="center">2</td>
+  <td align="center">‘c’</td>
+  <td align="center">‘f’</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Laravel</h2>
+
+<h3>Напишіть розклад, який буде виконуватися щоп’ятниці кожної години у 15 хвилин.</h3>
+
+<h3>Напишіть кастомну artisan-команду, яка в консоль буде виводити поточний час.</h3>
+        </div>
+    </div>
+</section>
+        </main>
+
+        <script src="/assets/build/js/main.js?id=49139ab0598cb90b25fc065caf47a9e6"></script>
+
+        <script>
+    const navMenu = {
+        toggle() {
+            const menu = document.getElementById('js-nav-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('lg:block');
+            document.getElementById('js-nav-menu-hide').classList.toggle('hidden');
+            document.getElementById('js-nav-menu-show').classList.toggle('hidden');
+        },
+    }
+</script>
+
+        <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
+            <ul class="flex flex-col md:flex-row justify-center">
+                <li class="md:mr-2">
+                    &copy; 2024
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
