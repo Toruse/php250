@@ -8,3 +8,4 @@ npm-debug.log
 .idea
 LICENSE.txt
 package-lock.json
+/.osp/

@@ -63,7 +63,7 @@
                     @if ($page->docsearchApiKey && $page->docsearchIndexName)
                         @include('_nav.search-input')
                     @endif
-                    <a href="{{ $page->baseUrl }}" title="{{ $page->ua->siteName }} home" class="px-1 font-black">
+                    <a href="{{ $page->baseUrl }}/" title="{{ $page->ua->siteName }} home" class="px-1 font-black">
                         ua
                     </a>
                     <a href="{{ $page->baseUrl }}/en" title="{{ $page->en->siteName }} home" class="px-1">
