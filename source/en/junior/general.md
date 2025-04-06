@@ -13,9 +13,100 @@ References in PHP are a means to access the same variable content by different n
 because in PHP they are symbol table aliases, and variable name and variable content are different, so the same content 
 can have different names.
 
-## Які основні операції з використанням посилань?
+## What are the main operations using references?
 
-## Назвіть прості типи даних, підтримувані в РНР?
+Three basic operations can be performed with references: assign by reference, passing by reference, and return by reference.
+
+### Assign By Reference
+
+This is when one variable refers to the value of another variable, for example:
+
+```php
+<?php
+    $a =& $b;
+?>
+```
+
+Here, variables $a and $b point to the same value.
+
+### Passing by Reference
+
+To do this, two variables are created that reference the same content: one is passed to the function, and the other is 
+passed to the scope of the call, for example:
+
+```php 
+<?php
+
+function foo(&$var)
+{
+    $var++;
+}
+
+$a = 5;
+foo($a);
+
+?>
+```
+
+As a result, the function will change the value pointed to by the variable $a to 6. The reason is that in the function
+foo the variable $var refers to the same content as the variable $a
+
+### Return By Reference
+
+Return by reference is used when you need to define a variable to which you want to bind a reference. An example with 
+an object, where the variable $myValue is a reference to the object property $value:
+
+```php 
+<?php
+
+class Foo
+{
+    public $value = 42;
+
+    public function &getValue()
+    {
+        return $this->value;
+    }
+}
+
+$obj = new Foo();
+$myValue = &$obj->getValue(); 
+$obj->value = 2;
+echo $myValue;  // 2
+
+?>
+``` 
+
+Another example:
+
+```php 
+<?php
+
+function &collector()
+{
+  static $collection = array();
+  return $collection;
+}
+
+$collection = &collector();
+$collection[] = 'foo';
+
+?>
+```
+
+## What are the simple types supported in PHP?
+
+* __Scalar types:__
+  * __bool__ - a logical type that accepts only two values, which express truth: true or false.
+  * __int__ - integers.
+  * __float__ - floating point numbers.
+  * __string__ - a string, contains a set of characters, in which a character is the same as a byte.
+* __array__ - an array, an ordered data structure that associates values ​​and keys.
+* __object__ - objects, an entity with state and behavior, with fields and methods.
+* __resource__ - a type that stores a reference to an external resource.
+* __never__ - a type that means the function will stop working without returning a value.
+* __void__ - a type that indicates that the function does not return a value.
+* __null__
 
 ## Що таке інкремент і декремент, у чому різниця між префіксним і постфіксним інкрементом і декрементом?
 

@@ -164,9 +164,101 @@
 because in PHP they are symbol table aliases, and variable name and variable content are different, so the same content 
 can have different names.</p>
 
-<h2>Які основні операції з використанням посилань?</h2>
+<h2>What are the main operations using references?</h2>
 
-<h2>Назвіть прості типи даних, підтримувані в РНР?</h2>
+<p>Three basic operations can be performed with references: assign by reference, passing by reference, and return by reference.</p>
+
+<h3>Assign By Reference</h3>
+
+<p>This is when one variable refers to the value of another variable, for example:</p>
+
+<pre><code class="language-php">&lt;?php
+    $a =&amp; $b;
+?&gt;
+</code></pre>
+
+<p>Here, variables $a and $b point to the same value.</p>
+
+<h3>Passing by Reference</h3>
+
+<p>To do this, two variables are created that reference the same content: one is passed to the function, and the other is 
+passed to the scope of the call, for example:</p>
+
+<pre><code class="language-php">&lt;?php
+
+function foo(&amp;$var)
+{
+    $var++;
+}
+
+$a = 5;
+foo($a);
+
+?&gt;
+</code></pre>
+
+<p>As a result, the function will change the value pointed to by the variable $a to 6. The reason is that in the function
+foo the variable $var refers to the same content as the variable $a</p>
+
+<h3>Return By Reference</h3>
+
+<p>Return by reference is used when you need to define a variable to which you want to bind a reference. An example with 
+an object, where the variable $myValue is a reference to the object property $value:</p>
+
+<pre><code class="language-php">&lt;?php
+
+class Foo
+{
+    public $value = 42;
+
+    public function &amp;getValue()
+    {
+        return $this-&gt;value;
+    }
+}
+
+$obj = new Foo();
+$myValue = &amp;$obj-&gt;getValue(); 
+$obj-&gt;value = 2;
+echo $myValue;  // 2
+
+?&gt;
+</code></pre>
+
+<p>Another example:</p>
+
+<pre><code class="language-php">&lt;?php
+
+function &amp;collector()
+{
+  static $collection = array();
+  return $collection;
+}
+
+$collection = &amp;collector();
+$collection[] = 'foo';
+
+?&gt;
+</code></pre>
+
+<h2>What are the simple types supported in PHP?</h2>
+
+<ul>
+<li><strong>Scalar types:</strong>
+
+<ul>
+<li><strong>bool</strong> - a logical type that accepts only two values, which express truth: true or false.</li>
+<li><strong>int</strong> - integers.</li>
+<li><strong>float</strong> - floating point numbers.</li>
+<li><strong>string</strong> - a string, contains a set of characters, in which a character is the same as a byte.</li>
+</ul></li>
+<li><strong>array</strong> - an array, an ordered data structure that associates values ​​and keys.</li>
+<li><strong>object</strong> - objects, an entity with state and behavior, with fields and methods.</li>
+<li><strong>resource</strong> - a type that stores a reference to an external resource.</li>
+<li><strong>never</strong> - a type that means the function will stop working without returning a value.</li>
+<li><strong>void</strong> - a type that indicates that the function does not return a value.</li>
+<li><strong>null</strong></li>
+</ul>
 
 <h2>Що таке інкремент і декремент, у чому різниця між префіксним і постфіксним інкрементом і декрементом?</h2>
 
